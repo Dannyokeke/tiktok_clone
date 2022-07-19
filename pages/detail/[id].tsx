@@ -40,12 +40,6 @@ const Detail = ({ postDetails }: IProps) => {
     }
   };
 
-  useEffect(() => {
-    if (post && videoRef?.current) {
-      videoRef.current.muted = isVideoMuted;
-    }
-  }, [post, isVideoMuted]);
-
   const handleLike = async (like: boolean) => {
     if (userProfile) {
       const res = await axios.put(`${BASE_URL}/api/like`, {
