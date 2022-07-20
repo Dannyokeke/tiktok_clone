@@ -11,4 +11,4 @@ export default async function handler( req: NextApiRequest,
 
         res.status(200).json(data);
       }
-    }
+    } 
